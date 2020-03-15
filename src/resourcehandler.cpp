@@ -37,6 +37,26 @@ void readMatrix(const std::string& file_name,
     n = matrix.size() / m;
 }
 
+void saveMatrix(const std::string &file_name,
+                const std::vector<double> &matrix,
+                const size_t &m,
+                const size_t &n)
+{
+    std::ofstream fout(file_name);
+    size_t count = 0;
+
+    for (const auto &item : matrix)
+    {
+        fout << item << " ";
+        count++;
+
+        if (count % n == 0)
+        {
+            fout << "\n";
+        }
+    }
+}
+
 void printMatrix(const std::vector<double> &matrix,
                  const size_t &m,
                  const size_t &n)

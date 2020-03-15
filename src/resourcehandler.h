@@ -18,6 +18,12 @@ void readMatrix(const std::string& file_name,
                 size_t& m,
                 size_t& n);
 
+
+void saveMatrix(const std::string& file_name,
+                const std::vector<double>& matrix,
+                const size_t& m,
+                const size_t& n);
+
 void printMatrix(const std::vector<double>& matrix,
                  const size_t& m,
                  const size_t& n);
